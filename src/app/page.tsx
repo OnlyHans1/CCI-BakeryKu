@@ -42,11 +42,6 @@ export default async function Home() {
         <div className="absolute top-8 right-8 w-24 h-24 sm:w-32 sm:h-32 bg-accent-pink border-4 border-border hidden sm:block" style={{ boxShadow: '6px 6px 0 var(--color-border)' }} />
         <div className="absolute bottom-8 right-16 w-16 h-16 bg-accent-blue border-4 border-border hidden sm:block" style={{ boxShadow: '4px 4px 0 var(--color-border)' }} />
 
-        <div className="inline-flex items-center gap-2 border-4 border-border bg-black text-main px-3 py-1.5 font-base font-bold text-xs w-fit" style={{ boxShadow: '3px 3px 0 var(--color-accent-pink)' }}>
-          <Flame size={13} strokeWidth={3} />
-          FRESH SETIAP HARI — ORDER SEKARANG!
-        </div>
-
         <h1 className="text-5xl sm:text-6xl md:text-8xl font-base font-black leading-none max-w-2xl">
           Roti<br />
           <span className="bg-black text-main px-2 py-1 inline-block">Segar</span><br />

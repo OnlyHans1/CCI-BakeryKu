@@ -93,22 +93,6 @@ export default async function ProductDetailPage({
               </div>
             )}
 
-            <div className="flex gap-3 flex-wrap">
-              <button
-                className="border-4 border-border bg-black text-white px-6 py-3 font-base font-black text-sm cursor-pointer hover:bg-accent-pink transition-all duration-150"
-                style={{ boxShadow: '5px 5px 0 var(--color-border)' }}
-                disabled={isOutOfStock}
-              >
-                {isOutOfStock ? "Stok Habis" : "Hubungi via WhatsApp"}
-              </button>
-              <Link
-                href="/products"
-                className="flex items-center gap-2 border-4 border-border bg-white text-foreground px-6 py-3 font-base font-black text-sm cursor-pointer hover:bg-main transition-colors"
-                style={{ boxShadow: '5px 5px 0 var(--color-border)' }}
-              >
-                <ArrowLeft size={16} /> Kembali
-              </Link>
-            </div>
           </div>
         </div>
       </div>
