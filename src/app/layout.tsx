@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Overpass_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const overpass = Overpass_Mono({
+  variable: "--font-overpass",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Bakery Ku",
-  description: "Bakery Ku adalah website penjualan roti yang menjual berbagai macam roti",
+  title: "BakeryKu — Roti Segar Setiap Hari",
+  description: "BakeryKu adalah toko roti online dengan berbagai pilihan roti fresh berkualitas premium, dikirim langsung ke pintu Anda.",
 };
 
 export default function RootLayout({
@@ -21,14 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${dmSans.variable} h-full antialiased`}
+      lang="id"
+      className={`${overpass.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-background">
         <Header />
-        <div className="flex-1 full max-w-7xl mx-auto px-6 py-8">
+        <main className="flex-1 w-full">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );

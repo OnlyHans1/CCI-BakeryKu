@@ -1,35 +1,101 @@
 @import "tailwindcss";
 
 @theme {
-  --color-main: #E3FF00;
+  
+  --color-main: #FADADD;
   --color-main-foreground: #000000;
-  --color-accent-pink: #FF00FF;
-  --color-accent-blue: #00F0FF;
-  --color-background: #FFFFFF;
-  --color-foreground: #000000;
-  --color-secondary-background: #FFFFFF;
-  --color-secondary-foreground: #000000;
-  --color-border: #000000;
-  --color-input: #000000;
-  --color-ring: #000000;
-  
-  --border-width-base: 4px;
-  --radius-base: 0px;
-  
-  --shadow-shadow: 6px 6px 0px 0px #000000;
-  --shadow-nav: 6px 6px 0px 0px #000000;
-  
-  --spacing-boxShadowX: 6px;
-  --spacing-boxShadowY: 6px;
-  --spacing-reverseBoxShadowX: -6px;
-  --spacing-reverseBoxShadowY: -6px;
 
-  --font-heading: var(--font-public-sans), system-ui, sans-serif;
-  --font-base: var(--font-public-sans), system-ui, sans-serif;
+  
+  --color-accent-pink: #FF6B9D;
+  --color-accent-pink-foreground: #ffffff;
+
+  
+  --color-accent-blue: #C8F5E3;
+  --color-accent-blue-foreground: #000000;
+
+  
+  --color-accent-lavender: #EDE7FF;
+  --color-accent-lavender-foreground: #000000;
+
+  
+  --color-background: #FFF8F3;
+  --color-foreground: #1a1a1a;
+
+  
+  --color-secondary-background: #FFF0F5;
+  --color-secondary-foreground: #1a1a1a;
+
+  
+  --color-border: #000000;
+  --color-overlay: rgba(0,0,0,0.55);
+  --color-input: #1a1a1a;
+  --color-ring: #FF6B9D;
+
+  --border-width-base: 3px;
+  --radius-base: 0px;
+
+  --shadow-shadow: 5px 5px 0px 0px #000000;
+  --shadow-nav: 0px 4px 0px 0px #000000;
+  --shadow-sm: 3px 3px 0px 0px #000000;
+  --shadow-lg: 8px 8px 0px 0px #000000;
+
+  --spacing-boxShadowX: 5px;
+  --spacing-boxShadowY: 5px;
+  --spacing-reverseBoxShadowX: -5px;
+  --spacing-reverseBoxShadowY: -5px;
+
+  
+  --font-base: 'Overpass Mono', system-ui, sans-serif;
 }
+
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-base);
+  margin: 0;
+  padding: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FFF8F3; }
+::-webkit-scrollbar-thumb { background: #FF6B9D; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #e05589; }
+
+.mobile-nav-open {
+  overflow: hidden;
+}
+
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+
+.hover-lift {
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.hover-lift:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+
+.section-full {
+  width: 100%;
+}
+

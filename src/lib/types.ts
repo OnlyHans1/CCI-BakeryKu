@@ -9,3 +9,15 @@ export type Product = {
     createdAt: string
     updatedAt: string
 }
+
+export type ApiMeta = {
+    total: number
+    page: number
+    limit: number
+    totalPages: number
+}
+
+export type ApiProductsResponse = {
+    data: Product[]
+    meta: ApiMeta
+}
